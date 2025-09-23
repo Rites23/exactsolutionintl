@@ -14,7 +14,7 @@ const HeroSection = () => {
   return (
     <section 
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-start md:items-center justify-center overflow-hidden"
       style={{
         backgroundImage: `url(${heroImage})`,
         backgroundSize: 'cover',
@@ -26,7 +26,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 hero-section opacity-90"></div>
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center text-white">
+  <div className="relative z-10 container mx-auto px-4 text-center text-white pt-14 md:pt-0">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             International Leading
@@ -51,7 +51,7 @@ const HeroSection = () => {
             </Button>
             <Button 
               variant="outline" 
-              className="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-primary"
+              className="text-lg px-8 py-4 border-white bg-white text-primary hover:bg-white/90 hover:text-primary"
               onClick={() => scrollToSection('portfolio')}
             >
               View Portfolio
@@ -81,7 +81,7 @@ const HeroSection = () => {
 
       {/* Scroll Indicator */}
       <div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce"
+        className="absolute bottom-2 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce"
         onClick={() => scrollToSection('about')}
       >
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
